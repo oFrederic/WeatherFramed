@@ -1,7 +1,12 @@
-import HelloWorld from './components/HelloWorld/HelloWorld';
+import { Fragment } from 'react';
+import Header from './components/Header/Header';
 
 const App = () => {
-  return <HelloWorld />;
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 };
 
 export default App;
