@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import mainLogo from '../../../assets/Icons/logo.png';
+import mainLogo from '../../../assets/Logo/logo.png';
 
 const Logo = styled.img`
   height: 6rem;
