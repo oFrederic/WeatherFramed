@@ -3,7 +3,7 @@ import Card from '../UI/Card/Card';
 import WeatherInformation from './Informations/WeatherInformation';
 import WeatherDetails from './Details/WeatherDetails';
 // @ts-ignore
-import SunnyVideo from '../../assets/Videos/clear.mp4';
+import SunnyVideo from '../../assets/Videos/snow.mp4';
 
 const City = styled.h1`
   color: #f3f3f3;

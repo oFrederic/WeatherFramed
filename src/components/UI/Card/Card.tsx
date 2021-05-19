@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: space-around;
   width: 35rem;
   height: 60rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   /* filter: blur(0.8rem); */
   margin: 10rem auto;
   border-radius: 3rem;

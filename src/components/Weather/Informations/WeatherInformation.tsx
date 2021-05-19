@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import Sunny from '../../../assets/Icons/sunny.svg';
+import Sunny from '../../../assets/Icons/snow.svg';
 import CelsiusIcon from '../../../assets/Icons/celsius.svg';
 
 const Container = styled.div`
