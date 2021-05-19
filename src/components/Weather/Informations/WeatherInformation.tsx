@@ -5,12 +5,13 @@ import CelsiusIcon from '../../../assets/Icons/celsius.svg';
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
 
 const Temperature = styled.div`
   display: flex;
+  margin-left: 2rem;
 `;
 
 const TemperatureLevel = styled.h1`
@@ -25,7 +26,7 @@ const CelsiusIconWrapper = styled.img`
 `;
 
 const WeatherIconWrapper = styled.img`
-  height: 15rem;
+  height: 12rem;
 `;
 
 export interface WeatherInformationProps {}
@@ -34,7 +35,7 @@ const WeatherInformation: React.FC<WeatherInformationProps> = props => {
   return (
     <Container>
       <Temperature>
-        <TemperatureLevel>9</TemperatureLevel>
+        <TemperatureLevel>19</TemperatureLevel>
         <CelsiusIconWrapper src={CelsiusIcon} alt="Celsius Icon" />
       </Temperature>
       <WeatherIconWrapper src={Sunny} alt="Weather Icon" />

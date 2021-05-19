@@ -13,9 +13,11 @@ const Humidity = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 1.5rem;
 `;
 
 const HumidityIconWrapper = styled.img`
+  width: 5rem;
   height: 5rem;
 `;
 
@@ -30,10 +32,11 @@ const Wind = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: 1.5rem;
 `;
 
 const WindIconWrapper = styled.img`
+  width: 5rem;
   height: 5rem;
 `;
 
