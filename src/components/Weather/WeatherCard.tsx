@@ -2,16 +2,41 @@ import styled from '@emotion/styled';
 import Card from '../UI/Card/Card';
 import WeatherInformation from './Informations/WeatherInformation';
 import WeatherDetails from './Details/WeatherDetails';
+// @ts-ignore
+import SunnyVideo from '../../assets/Videos/Sunny.mp4';
 
 const City = styled.h1`
   color: #f3f3f3;
   font-size: 4rem;
   text-align: center;
+  z-index: 1;
+`;
+
+const Video = styled.video`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hiden;
+`;
+
+const BackgroundVideo = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
 `;
 
 const WeatherCard: React.FC<{}> = props => {
   return (
     <Card>
+      <BackgroundVideo>
+        <Video autoPlay muted loop>
+          <source src={SunnyVideo}></source>
+        </Video>
+      </BackgroundVideo>
       <City>TOKYO, JP</City>
       <WeatherInformation />
       <WeatherDetails />

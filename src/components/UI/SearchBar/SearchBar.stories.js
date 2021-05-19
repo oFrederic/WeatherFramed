@@ -1,7 +1,7 @@
 import Search from './SearchBar';
 
 export default {
-  title: 'Header/components/Search',
+  title: 'UI/Search',
   component: Search,
 };
 

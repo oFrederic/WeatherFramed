@@ -1,7 +1,7 @@
 import Brand from './Brand';
 
 export default {
-  title: 'Header/components/Brand',
+  title: 'UI/Brand',
   component: Brand,
 };
 
