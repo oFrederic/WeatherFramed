@@ -10,6 +10,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-size: 5rem;
   margin-left: 3rem;
+  font-weight: normal;
 `;
 
 const Container = styled.div`

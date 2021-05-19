@@ -23,6 +23,7 @@ const HumidityLevel = styled.h2`
   color: white;
   font-size: 2.5rem;
   margin-top: 0.5rem;
+  font-weight: normal;
 `;
 
 const Wind = styled.div`
@@ -40,9 +41,12 @@ const WindLevel = styled.h2`
   color: white;
   font-size: 2.5rem;
   margin-top: 0.5rem;
+  font-weight: normal;
 `;
 
-const WeatherDetails: React.FC<{}> = props => {
+export interface WeatherDetailsProps {}
+
+const WeatherDetails: React.FC<WeatherDetailsProps> = props => {
   return (
     <Container>
       <Humidity>

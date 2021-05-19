@@ -16,6 +16,7 @@ const Temperature = styled.div`
 const TemperatureLevel = styled.h1`
   color: #f3f3f3;
   font-size: 15rem;
+  font-weight: normal;
 `;
 
 const CelsiusIconWrapper = styled.img`
@@ -27,7 +28,9 @@ const WeatherIconWrapper = styled.img`
   height: 15rem;
 `;
 
-const WeatherInformation: React.FC<{}> = props => {
+export interface WeatherInformationProps {}
+
+const WeatherInformation: React.FC<WeatherInformationProps> = props => {
   return (
     <Container>
       <Temperature>

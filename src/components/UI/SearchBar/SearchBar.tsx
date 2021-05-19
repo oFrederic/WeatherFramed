@@ -25,7 +25,9 @@ const Input = styled.input`
   }
 `;
 
-const SearchBar: React.FC<{}> = props => {
+export interface SearchBarProps {}
+
+const SearchBar: React.FC<SearchBarProps> = props => {
   return (
     <Form>
       <Label>Search Different Location</Label>
