@@ -8,13 +8,14 @@ export const getUserLocation = () => {
     const getLocation = async () => {
       const response = await axios('https://ipapi.co/json/');
       const data = response.data;
-      const location = data.region;
-      return location;
+      const city = data.city;
+      const country = data.country_code;
+      return { city, country };
     };
 
     try {
       const location = await getLocation();
-      if (location) dispatch(localisationActions.setLocation({ location }));
+      if (location) dispatch(localisationActions.setLocation(location));
     } catch (error) {
       throw new Error("Couldn't get the user location");
     }

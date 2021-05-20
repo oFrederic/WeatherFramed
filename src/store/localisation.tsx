@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface LocalisationState {
-  location: string;
+  city: string;
+  country: string;
 }
 
 const initialState: LocalisationState = {
-  location: '',
+  city: '',
+  country: '',
 };
 
 const localisationSlice = createSlice({
@@ -13,7 +15,8 @@ const localisationSlice = createSlice({
   initialState,
   reducers: {
     setLocation(state, action) {
-      state.location = action.payload.location;
+      state.city = action.payload.city;
+      state.country = action.payload.country;
     },
   },
 });

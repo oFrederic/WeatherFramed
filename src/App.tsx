@@ -7,16 +7,14 @@ import { RootState } from './store';
 import { getUserLocation } from './store/localisation-actions';
 
 const App = () => {
+  console.log('RENDERING!!!');
   const dispatch = useDispatch();
-  const location = useSelector(
-    (state: RootState) => state.localisation.location
-  );
+  const location = useSelector((state: RootState) => state.localisation);
 
   useEffect(() => {
     dispatch(getUserLocation());
-  }, [dispatch]);
-
-  console.log(`you have been localise at ${location}`);
+    console.log(location);
+  }, [dispatch, location]);
 
   return (
     <Fragment>
