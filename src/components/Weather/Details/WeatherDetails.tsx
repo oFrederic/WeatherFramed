@@ -1,3 +1,6 @@
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/index';
+
 import styled from '@emotion/styled';
 
 import HumidityIcon from '../../../assets/Icons/humidity.svg';
@@ -50,15 +53,17 @@ const WindLevel = styled.h2`
 export interface WeatherDetailsProps {}
 
 const WeatherDetails: React.FC<WeatherDetailsProps> = props => {
+  const weather = useSelector((state: RootState) => state.weather);
+
   return (
     <Container>
       <Humidity>
         <HumidityIconWrapper src={HumidityIcon} alt="Humidity Icon" />
-        <HumidityLevel>15</HumidityLevel>
+        <HumidityLevel>{weather.humidity}</HumidityLevel>
       </Humidity>
       <Wind>
         <WindIconWrapper src={WindIcon} alt="Wind Icon" />
-        <WindLevel>2 km/h</WindLevel>
+        <WindLevel>{weather.windSpeed} km/h</WindLevel>
       </Wind>
     </Container>
   );

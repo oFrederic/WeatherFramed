@@ -23,9 +23,9 @@ const weatherSlice = createSlice({
     setWeather(state, action) {
       state.location = action.payload.location;
       state.weather = action.payload.weather;
-      state.temp = action.payload.temp;
+      state.temp = Math.round(action.payload.temp);
       // transform m/s to km/h (1m/s = 3.6km/h).
-      state.windSpeed = action.payload.windSpeed * 3.6;
+      state.windSpeed = Math.round(action.payload.windSpeed * 3.6);
       state.humidity = action.payload.humidity;
     },
   },

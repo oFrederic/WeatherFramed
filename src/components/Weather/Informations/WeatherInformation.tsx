@@ -1,7 +1,14 @@
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/index';
+
 import styled from '@emotion/styled';
 
-import Sunny from '../../../assets/Icons/snow.svg';
 import CelsiusIcon from '../../../assets/Icons/celsius.svg';
+import clear from '../../../assets/Icons/clear.svg';
+import cloud from '../../../assets/Icons/cloudy.svg';
+import rain from '../../../assets/Icons/rain.svg';
+import snow from '../../../assets/Icons/snow.svg';
+import thunder from '../../../assets/Icons/thunder.svg';
 
 const Container = styled.div`
   display: flex;
@@ -32,13 +39,43 @@ const WeatherIconWrapper = styled.img`
 export interface WeatherInformationProps {}
 
 const WeatherInformation: React.FC<WeatherInformationProps> = props => {
+  const weather = useSelector((state: RootState) => state.weather);
+
+  let currIcon;
+
+  switch (weather.weather) {
+    case 'Clear':
+      currIcon = clear;
+      break;
+
+    case 'Clouds':
+      currIcon = cloud;
+      break;
+
+    case 'Rain':
+    case 'Drizzle':
+      currIcon = rain;
+      break;
+
+    case 'Snow':
+      currIcon = snow;
+      break;
+
+    case 'Thunderstorm':
+      currIcon = thunder;
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <Container>
       <Temperature>
-        <TemperatureLevel>19</TemperatureLevel>
+        <TemperatureLevel>{weather.temp}</TemperatureLevel>
         <CelsiusIconWrapper src={CelsiusIcon} alt="Celsius Icon" />
       </Temperature>
-      <WeatherIconWrapper src={Sunny} alt="Weather Icon" />
+      <WeatherIconWrapper src={currIcon} alt="Weather Icon" />
     </Container>
   );
 };

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Header from './components/Header/Header';
 import WeatherCard from './components/Weather/WeatherCard';
-import { RootState } from './store';
+import { RootState } from './store/index';
 import { getUserLocation } from './store/localisation-actions';
 import { getCurrentWeather } from './store/weather-actions';
 

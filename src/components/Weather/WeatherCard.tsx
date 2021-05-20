@@ -1,9 +1,20 @@
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/index';
+
 import styled from '@emotion/styled';
 import Card from '../UI/Card/Card';
 import WeatherInformation from './Informations/WeatherInformation';
 import WeatherDetails from './Details/WeatherDetails';
 // @ts-ignore
-import SunnyVideo from '../../assets/Videos/snow.mp4';
+import cloud from '../../assets/Videos/cloud.mp4';
+// @ts-ignore
+import clear from '../../assets/Videos/clear.mp4';
+// @ts-ignore
+import rain from '../../assets/Videos/rain.mp4';
+// @ts-ignore
+import snow from '../../assets/Videos/snow.mp4';
+// @ts-ignore
+import thunder from '../../assets/Videos/thunder.mp4';
 
 const City = styled.h1`
   color: #f3f3f3;
@@ -34,14 +45,45 @@ const BackgroundVideo = styled.div`
 export interface WeatherCardProps {}
 
 const WeatherCard: React.FC<WeatherCardProps> = props => {
+  const weather = useSelector((state: RootState) => state.weather);
+  console.log(weather);
+
+  let currBackground;
+
+  switch (weather.weather) {
+    case 'Clear':
+      currBackground = clear;
+      break;
+
+    case 'Clouds':
+      currBackground = cloud;
+      break;
+
+    case 'Rain':
+    case 'Drizzle':
+      currBackground = rain;
+      break;
+
+    case 'Snow':
+      currBackground = snow;
+      break;
+
+    case 'Thunderstorm':
+      currBackground = thunder;
+      break;
+
+    default:
+      break;
+  }
+
+  console.log(currBackground);
+
   return (
     <Card>
       <BackgroundVideo>
-        <Video autoPlay muted loop>
-          <source src={SunnyVideo}></source>
-        </Video>
+        <Video autoPlay muted loop src={currBackground}></Video>
       </BackgroundVideo>
-      <City>TOKYO, JP</City>
+      <City>{weather.location}</City>
       <WeatherInformation />
       <WeatherDetails />
     </Card>
