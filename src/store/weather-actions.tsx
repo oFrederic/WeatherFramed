@@ -13,6 +13,8 @@ export const getCurrentWeather = (localisation: {
       const response = await axios(
         `http://api.openweathermap.org/data/2.5/weather?q=${localisation.city},${localisation.country}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
       );
+      console.log('test');
+
       const data = response.data;
       return data;
     };
