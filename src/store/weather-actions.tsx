@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import { weatherActions } from './weather';
 import { AppDispatch } from './index';
+import { uiActions } from './ui';
 
 export const getCurrentWeather = (localisation: {
   city: string;
@@ -10,6 +11,13 @@ export const getCurrentWeather = (localisation: {
   return async (dispatch: AppDispatch) => {
     const getWeather = async () => {
       console.log('openweathermap API call!');
+      dispatch(
+        uiActions.setNotification({
+          status: 'pending',
+          title: 'Fetching...',
+          message: 'Fetching weather data!',
+        })
+      );
       const response = await axios(
         `http://api.openweathermap.org/data/2.5/weather?q=${localisation.city},${localisation.country}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
       );
@@ -31,8 +39,22 @@ export const getCurrentWeather = (localisation: {
         };
 
         dispatch(weatherActions.setWeather(currWeather));
+        dispatch(
+          uiActions.setNotification({
+            status: 'success',
+            title: 'Success!',
+            message: 'Fetching weather data successfully!',
+          })
+        );
       }
     } catch (error) {
+      dispatch(
+        uiActions.setNotification({
+          status: 'error',
+          title: 'Error!',
+          message: 'Fetching weather data failed!',
+        })
+      );
       throw new Error("Couldn't get the Weather");
     }
   };
