@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import localisationReducer from './localisation';
+import weatherReducer from './weather';
 
 const store = configureStore({
-  reducer: { localisation: localisationReducer },
+  reducer: { localisation: localisationReducer, weather: weatherReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

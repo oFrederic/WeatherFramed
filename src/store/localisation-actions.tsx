@@ -6,6 +6,7 @@ import { AppDispatch } from './index';
 export const getUserLocation = () => {
   return async (dispatch: AppDispatch) => {
     const getLocation = async () => {
+      console.log('gelocalisation API call!');
       const response = await axios('https://ipapi.co/json/');
       const data = response.data;
       const city = data.city;

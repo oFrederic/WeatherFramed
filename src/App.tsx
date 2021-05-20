@@ -5,16 +5,21 @@ import Header from './components/Header/Header';
 import WeatherCard from './components/Weather/WeatherCard';
 import { RootState } from './store';
 import { getUserLocation } from './store/localisation-actions';
+import { getCurrentWeather } from './store/weather-actions';
 
 const App = () => {
   console.log('RENDERING!!!');
   const dispatch = useDispatch();
   const location = useSelector((state: RootState) => state.localisation);
+  const weather = useSelector((state: RootState) => state.weather);
 
   useEffect(() => {
-    dispatch(getUserLocation());
-    console.log(location);
-  }, [dispatch, location]);
+    if (location.city === '') dispatch(getUserLocation());
+    if (location.city !== '' && weather.location === '')
+      dispatch(getCurrentWeather(location));
+
+    console.log(weather, 'recieve and formated weather object');
+  }, [dispatch, location, weather]);
 
   return (
     <Fragment>
