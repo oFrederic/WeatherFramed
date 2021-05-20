@@ -6,15 +6,15 @@ import Card from '../UI/Card/Card';
 import WeatherInformation from './Informations/WeatherInformation';
 import WeatherDetails from './Details/WeatherDetails';
 // @ts-ignore
-import cloud from '../../assets/Videos/cloud.mp4';
+import cloud from '../../assets/Videos/cloud.m4v';
 // @ts-ignore
-import clear from '../../assets/Videos/clear.mp4';
+import clear from '../../assets/Videos/clear.m4v';
 // @ts-ignore
-import rain from '../../assets/Videos/rain.mp4';
+import rain from '../../assets/Videos/rain.m4v';
 // @ts-ignore
-import snow from '../../assets/Videos/snow.mp4';
+import snow from '../../assets/Videos/snow.m4v';
 // @ts-ignore
-import thunder from '../../assets/Videos/thunder.mp4';
+import thunder from '../../assets/Videos/thunder.m4v';
 
 const City = styled.h1`
   color: #f3f3f3;
