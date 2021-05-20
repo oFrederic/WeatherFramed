@@ -6,10 +6,9 @@ import { WeatherCardProps } from './WeatherCard';
 export default {
   title: 'Card/Weather',
   component: WeatherCard,
-  argTypes: {},
 };
 
-const Template: Story<WeatherCardProps> = props => <WeatherCard {...props} />;
+const Template: Story<WeatherCardProps> = args => <WeatherCard {...args} />;
 
 export const weather = Template.bind({});
-weather.argTypes = {};
+weather.args = {};

@@ -6,10 +6,9 @@ import { SearchBarProps } from './SearchBar';
 export default {
   title: 'UI/Search',
   component: Search,
-  argTypes: {},
 };
 
-const Template: Story<SearchBarProps> = props => <Search {...props} />;
+const Template: Story<SearchBarProps> = args => <Search {...args} />;
 
 export const search = Template.bind({});
-search.argTypes = {};
+search.args = {};

@@ -6,12 +6,11 @@ import { WeatherDetailsProps } from './WeatherDetails';
 export default {
   title: 'Card/Weather/WeatherComponents/Details',
   component: WeatherDetails,
-  argTypes: {},
 };
 
-const Template: Story<WeatherDetailsProps> = props => (
-  <WeatherDetails {...props} />
+const Template: Story<WeatherDetailsProps> = args => (
+  <WeatherDetails {...args} />
 );
 
 export const Details = Template.bind({});
-Details.argTypes = {};
+Details.args = {};

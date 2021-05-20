@@ -6,10 +6,9 @@ import { CardProps } from './Card';
 export default {
   title: 'UI/Card',
   component: Card,
-  argTypes: {},
 };
 
-const Template: Story<CardProps> = props => <Card {...props} />;
+const Template: Story<CardProps> = args => <Card {...args} />;
 
 export const card = Template.bind({});
-card.argTypes = {};
+card.args = {};
