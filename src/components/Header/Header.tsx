@@ -8,6 +8,10 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const Header: React.FC<{}> = props => {

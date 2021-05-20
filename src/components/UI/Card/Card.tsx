@@ -14,6 +14,12 @@ const Container = styled.div`
   border-radius: 3rem;
   box-shadow: 0 1.4rem 2.8rem rgba(0, 0, 0, 0.25),
     0 1rem 1rem rgba(0, 0, 0, 0.22);
+
+  @media (max-width: 450px) {
+    margin: 0 0;
+    width: 100%;
+    border-radius: 0rem;
+  }
 `;
 
 export interface CardProps {}

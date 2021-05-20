@@ -14,6 +14,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 450px) {
+    justify-content: space-around;
+  }
 `;
 
 const Temperature = styled.div`

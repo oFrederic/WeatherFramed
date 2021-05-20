@@ -5,6 +5,10 @@ import styled from '@emotion/styled';
 const Label = styled.label`
   font-size: 3rem;
   color: #f3f3f3;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const Form = styled.form`

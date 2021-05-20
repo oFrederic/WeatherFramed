@@ -3,6 +3,10 @@ import mainLogo from '../../../assets/Logo/logo.png';
 
 const Logo = styled.img`
   height: 6rem;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h1`
@@ -11,6 +15,11 @@ const Title = styled.h1`
   font-size: 5rem;
   margin-left: 3rem;
   font-weight: normal;
+
+  @media (max-width: 650px) {
+    margin-left: 0rem;
+    font-size: 4rem;
+  }
 `;
 
 const Container = styled.div`
