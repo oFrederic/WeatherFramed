@@ -5,15 +5,11 @@ import styled from '@emotion/styled';
 import { Card } from 'components/UI/Card/Card';
 import { WeatherInformation } from 'components/Weather/Informations/WeatherInformation';
 import { WeatherDetails } from 'components/Weather/Details/WeatherDetails';
-// @ts-ignore
+
 import cloud from 'assets/Videos/cloud.mp4';
-// @ts-ignore
 import clear from 'assets/Videos/clear.mp4';
-// @ts-ignore
 import rain from 'assets/Videos/rain.mp4';
-// @ts-ignore
 import snow from 'assets/Videos/snow.mp4';
-// @ts-ignore
 import thunder from 'assets/Videos/thunder.mp4';
 
 const City = styled.h1`
