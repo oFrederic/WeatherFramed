@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 
-import Brand from './Brand';
+import { Brand } from './Brand';
 
 export default {
   title: 'UI/Brand',

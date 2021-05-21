@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import WeatherInformation from './WeatherInformation';
+import { WeatherInformation } from './WeatherInformation';
 
 describe('Weather Information component', () => {
   test('Should render "Celsius" Logo', () => {

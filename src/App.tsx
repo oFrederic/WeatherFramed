@@ -1,14 +1,14 @@
 import { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Header from './components/Header/Header';
-import WeatherCard from './components/Weather/WeatherCard';
-import Notification from './components/UI/Notification/Notification';
+import { Header } from './components/Header/Header';
+import { WeatherCard } from './components/Weather/WeatherCard';
+import { Notification } from './components/UI/Notification/Notification';
 import { RootState } from './store/index';
 import { getUserLocation } from './store/localisation-actions';
 import { getCurrentWeather } from './store/weather-actions';
 
-const App = () => {
+export const App = () => {
   console.log('RENDERING!!!');
   const dispatch = useDispatch();
   const location = useSelector((state: RootState) => state.localisation);
@@ -37,5 +37,3 @@ const App = () => {
     </Fragment>
   );
 };
-
-export default App;

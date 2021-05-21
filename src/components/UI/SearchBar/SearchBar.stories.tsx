@@ -1,13 +1,13 @@
 import { Story } from '@storybook/react';
 
-import Search from './SearchBar';
+import { SearchBar } from './SearchBar';
 
 export default {
   title: 'UI/Search',
-  component: Search,
+  component: SearchBar,
 };
 
-const Template: Story<{}> = args => <Search {...args} />;
+const Template: Story<{}> = args => <SearchBar {...args} />;
 
 export const search = Template.bind({});
 search.args = {};

@@ -40,7 +40,7 @@ const WeatherIconWrapper = styled.img`
   height: 12rem;
 `;
 
-const WeatherInformation: React.FC<{}> = props => {
+export const WeatherInformation: React.FC<{}> = props => {
   const weather = useSelector((state: RootState) => state.weather);
 
   let currIcon;
@@ -81,5 +81,3 @@ const WeatherInformation: React.FC<{}> = props => {
     </Container>
   );
 };
-
-export default WeatherInformation;

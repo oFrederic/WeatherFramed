@@ -26,7 +26,7 @@ const Container = styled.div`
   display: flex;
 `;
 
-const Brand: React.FC<{}> = props => {
+export const Brand: React.FC<{}> = props => {
   return (
     <Container>
       <Logo src={mainLogo} alt="brand logo" />
@@ -34,5 +34,3 @@ const Brand: React.FC<{}> = props => {
     </Container>
   );
 };
-
-export default Brand;

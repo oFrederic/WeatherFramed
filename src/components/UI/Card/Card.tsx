@@ -23,8 +23,6 @@ const Container = styled.div`
   }
 `;
 
-const Card: React.FC<{}> = props => {
+export const Card: React.FC<{}> = props => {
   return <Container>{props.children}</Container>;
 };
-
-export default Card;

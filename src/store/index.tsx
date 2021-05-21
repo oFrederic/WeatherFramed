@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import localisationReducer from './localisation';
-import weatherReducer from './weather';
-import uiReducer from './ui';
+import { localisationReducer } from './localisation';
+import { weatherReducer } from './weather';
+import { uiReducer } from './ui';
 
 const store = configureStore({
   reducer: {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Brand from './Brand';
+import { Brand } from './Brand';
 
 describe('Brand component', () => {
   test('render "Weather Framed" title', () => {

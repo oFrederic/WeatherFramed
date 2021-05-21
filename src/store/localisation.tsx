@@ -22,4 +22,4 @@ const localisationSlice = createSlice({
 });
 
 export const localisationActions = localisationSlice.actions;
-export default localisationSlice.reducer;
+export const localisationReducer = localisationSlice.reducer;

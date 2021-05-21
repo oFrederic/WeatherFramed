@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import Brand from '../UI/Brand/Brand';
-import SearchBar from '../UI/SearchBar/SearchBar';
+import { Brand } from '../UI/Brand/Brand';
+import { SearchBar } from '../UI/SearchBar/SearchBar';
 
 const Container = styled.header`
   padding: 1.5rem;
@@ -14,7 +14,7 @@ const Container = styled.header`
   }
 `;
 
-const Header: React.FC<{}> = props => {
+export const Header: React.FC<{}> = props => {
   return (
     <Container>
       <Brand />
@@ -22,5 +22,3 @@ const Header: React.FC<{}> = props => {
     </Container>
   );
 };
-
-export default Header;

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import SearchBar from './SearchBar';
+import { SearchBar } from './SearchBar';
 
 describe('SearchBar component', () => {
   test('render "Search Different Location"', () => {

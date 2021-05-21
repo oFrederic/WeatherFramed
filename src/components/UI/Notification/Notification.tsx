@@ -36,7 +36,7 @@ export interface NotificationProps {
   message: string;
 }
 
-const Notification: React.FC<NotificationProps> = props => {
+export const Notification: React.FC<NotificationProps> = props => {
   return (
     <Container status={props.status}>
       <Title>{props.title}</Title>
@@ -44,5 +44,3 @@ const Notification: React.FC<NotificationProps> = props => {
     </Container>
   );
 };
-
-export default Notification;

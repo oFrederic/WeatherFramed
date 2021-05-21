@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 
-import Header from './Header';
+import { Header } from './Header';
 
 export default {
   title: 'Header/Header',

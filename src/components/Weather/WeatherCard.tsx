@@ -2,9 +2,9 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../store/index';
 
 import styled from '@emotion/styled';
-import Card from '../UI/Card/Card';
-import WeatherInformation from './Informations/WeatherInformation';
-import WeatherDetails from './Details/WeatherDetails';
+import { Card } from '../UI/Card/Card';
+import { WeatherInformation } from './Informations/WeatherInformation';
+import { WeatherDetails } from './Details/WeatherDetails';
 // @ts-ignore
 import cloud from '../../assets/Videos/cloud.mp4';
 // @ts-ignore
@@ -42,7 +42,7 @@ const BackgroundVideo = styled.div`
   width: 100%;
 `;
 
-const WeatherCard: React.FC<{}> = props => {
+export const WeatherCard: React.FC<{}> = props => {
   const weather = useSelector((state: RootState) => state.weather);
   console.log(weather);
 
@@ -89,5 +89,3 @@ const WeatherCard: React.FC<{}> = props => {
     </Card>
   );
 };
-
-export default WeatherCard;

@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 
-import Notification from './Notification';
+import { Notification } from './Notification';
 import { NotificationProps } from './Notification';
 
 export default {

@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 
-import WeatherDetails from './WeatherDetails';
+import { WeatherDetails } from './WeatherDetails';
 
 export default {
   title: 'Card/Weather/WeatherComponents/Details',
