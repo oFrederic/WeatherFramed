@@ -10,7 +10,7 @@ import cloud from '../../assets/Videos/cloud.m4v';
 // @ts-ignore
 import clear from '../../assets/Videos/clear.m4v';
 // @ts-ignore
-import rain from '../../assets/Videos/rain.m4v';
+import rain from '../../assets/Videos/rain.mp4';
 // @ts-ignore
 import snow from '../../assets/Videos/snow.m4v';
 // @ts-ignore
