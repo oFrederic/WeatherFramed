@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../store/index';
+import { RootState } from 'store/index';
 
 import styled from '@emotion/styled';
 
-import HumidityIcon from '../../../assets/Icons/humidity.svg';
-import WindIcon from '../../../assets/Icons/windSpeed.svg';
+import HumidityIcon from 'assets/Icons/humidity.svg';
+import WindIcon from 'assets/Icons/windSpeed.svg';
 
 const Container = styled.div`
   display: flex;

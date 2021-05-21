@@ -1,20 +1,20 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../store/index';
+import { RootState } from 'store/index';
 
 import styled from '@emotion/styled';
-import { Card } from '../UI/Card/Card';
-import { WeatherInformation } from './Informations/WeatherInformation';
-import { WeatherDetails } from './Details/WeatherDetails';
+import { Card } from 'components/UI/Card/Card';
+import { WeatherInformation } from 'components/Weather/Informations/WeatherInformation';
+import { WeatherDetails } from 'components/Weather/Details/WeatherDetails';
 // @ts-ignore
-import cloud from '../../assets/Videos/cloud.mp4';
+import cloud from 'assets/Videos/cloud.mp4';
 // @ts-ignore
-import clear from '../../assets/Videos/clear.mp4';
+import clear from 'assets/Videos/clear.mp4';
 // @ts-ignore
-import rain from '../../assets/Videos/rain.mp4';
+import rain from 'assets/Videos/rain.mp4';
 // @ts-ignore
-import snow from '../../assets/Videos/snow.mp4';
+import snow from 'assets/Videos/snow.mp4';
 // @ts-ignore
-import thunder from '../../assets/Videos/thunder.mp4';
+import thunder from 'assets/Videos/thunder.mp4';
 
 const City = styled.h1`
   color: #f3f3f3;

@@ -1,14 +1,14 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../store/index';
+import { RootState } from 'store/index';
 
 import styled from '@emotion/styled';
 
-import CelsiusIcon from '../../../assets/Icons/celsius.svg';
-import clear from '../../../assets/Icons/clear.svg';
-import cloud from '../../../assets/Icons/cloudy.svg';
-import rain from '../../../assets/Icons/rain.svg';
-import snow from '../../../assets/Icons/snow.svg';
-import thunder from '../../../assets/Icons/thunder.svg';
+import CelsiusIcon from 'assets/Icons/celsius.svg';
+import clear from 'assets/Icons/clear.svg';
+import cloud from 'assets/Icons/cloudy.svg';
+import rain from 'assets/Icons/rain.svg';
+import snow from 'assets/Icons/snow.svg';
+import thunder from 'assets/Icons/thunder.svg';
 
 const Container = styled.div`
   display: flex;

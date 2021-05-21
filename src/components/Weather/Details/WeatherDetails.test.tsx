@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { WeatherDetails } from './WeatherDetails';
+import { WeatherDetails } from 'components/Weather/Details/WeatherDetails';
 
 describe('Weather Details component', () => {
   test('render "humidity" logo', () => {

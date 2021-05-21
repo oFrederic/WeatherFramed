@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { Brand } from '../UI/Brand/Brand';
-import { SearchBar } from '../UI/SearchBar/SearchBar';
+
+import { Brand } from 'components/UI/Brand/Brand';
+import { SearchBar } from 'components/UI/SearchBar/SearchBar';
 
 const Container = styled.header`
   padding: 1.5rem;

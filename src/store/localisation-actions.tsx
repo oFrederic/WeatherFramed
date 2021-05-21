@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { localisationActions } from './localisation';
-import { AppDispatch } from './index';
-import { uiActions } from './ui';
+import { localisationActions } from 'store/localisation';
+import { AppDispatch } from 'store/index';
+import { uiActions } from 'store/ui';
 
 export const getUserLocation = () => {
   return async (dispatch: AppDispatch) => {

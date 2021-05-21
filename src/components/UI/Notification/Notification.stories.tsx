@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react';
 
-import { Notification } from './Notification';
-import { NotificationProps } from './Notification';
+import { Notification } from 'components/UI/Notification/Notification';
+import { NotificationProps } from 'components/UI/Notification/Notification';
 
 export default {
   title: 'UI/Notification',

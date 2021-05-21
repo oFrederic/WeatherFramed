@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { weatherActions } from './weather';
-import { AppDispatch } from './index';
-import { uiActions } from './ui';
+import { weatherActions } from 'store/weather';
+import { AppDispatch } from 'store/index';
+import { uiActions } from 'store/ui';
 
 export const getCurrentWeather = (localisation: {
   city: string;

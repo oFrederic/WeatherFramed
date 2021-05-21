@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react';
 
-import { SearchBar } from './SearchBar';
+import { SearchBar } from 'components/UI/SearchBar/SearchBar';
 
 export default {
   title: 'UI/Search',
