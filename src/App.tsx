@@ -22,14 +22,17 @@ export const App = () => {
   const notification = useSelector((state: RootState) => state.ui.notification);
 
   useEffect(() => {
+    console.log('WARNING 1!!!');
     // If there is no query...
     if (!city) {
+      console.log('WARNING 2!!!');
       // we fetch the user location...
       if (location.city === '') dispatch(getUserLocation());
       // And then the weather with that current location.
       if (location.city !== '' && weather.location === '')
         dispatch(getCurrentWeather(location));
     } else {
+      console.log('WARNING 3!!!');
       // If there is a query we fetch the weather for that city.
       dispatch(getCurrentWeather({ city: city!, country: '' }));
     }
