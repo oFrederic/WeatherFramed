@@ -1,5 +1,6 @@
 import { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 import { Header } from 'components/Header/Header';
 import { WeatherCard } from 'components/Weather/WeatherCard';
@@ -9,6 +10,11 @@ import { getUserLocation } from 'store/localisation-actions';
 import { getCurrentWeather } from 'store/weather-actions';
 
 export const App = () => {
+  // Getting the Query if there is any.
+  const loc = useLocation();
+  const query = new URLSearchParams(loc.search);
+  const city = query.get('city');
+
   console.log('RENDERING!!!');
   const dispatch = useDispatch();
   const location = useSelector((state: RootState) => state.localisation);
@@ -16,12 +22,20 @@ export const App = () => {
   const notification = useSelector((state: RootState) => state.ui.notification);
 
   useEffect(() => {
-    if (location.city === '') dispatch(getUserLocation());
-    if (location.city !== '' && weather.location === '')
-      dispatch(getCurrentWeather(location));
+    // If there is no query...
+    if (!city) {
+      // we fetch the user location...
+      if (location.city === '') dispatch(getUserLocation());
+      // And then the weather with that current location.
+      if (location.city !== '' && weather.location === '')
+        dispatch(getCurrentWeather(location));
+    } else {
+      // If there is a query we fetch the weather for that city.
+      dispatch(getCurrentWeather({ city: city!, country: '' }));
+    }
 
     console.log(weather, 'recieve and formated weather object');
-  }, [dispatch, location, weather]);
+  }, [dispatch, location, weather, city]);
 
   return (
     <Fragment>
