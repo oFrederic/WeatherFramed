@@ -1,3 +1,5 @@
+import { Story } from '@storybook/react';
+
 import Brand from './Brand';
 
 export default {
@@ -5,7 +7,7 @@ export default {
   component: Brand,
 };
 
-const Template = props => <Brand {...props} />;
+const Template: Story<{}> = args => <Brand {...args} />;
 
 export const brand = Template.bind({});
-brand.props = {};
+brand.args = {};

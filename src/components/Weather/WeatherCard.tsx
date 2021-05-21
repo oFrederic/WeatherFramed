@@ -42,9 +42,7 @@ const BackgroundVideo = styled.div`
   width: 100%;
 `;
 
-export interface WeatherCardProps {}
-
-const WeatherCard: React.FC<WeatherCardProps> = props => {
+const WeatherCard: React.FC<{}> = props => {
   const weather = useSelector((state: RootState) => state.weather);
   console.log(weather);
 
@@ -82,7 +80,7 @@ const WeatherCard: React.FC<WeatherCardProps> = props => {
     <Card>
       <BackgroundVideo>
         <Video autoPlay muted loop src={currBackground}>
-          <source type="video/mp4" />
+          <source src={currBackground} type="video/mp4" />
         </Video>
       </BackgroundVideo>
       <City>{weather.location}</City>

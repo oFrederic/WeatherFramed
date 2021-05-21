@@ -50,9 +50,7 @@ const WindLevel = styled.h2`
   font-weight: normal;
 `;
 
-export interface WeatherDetailsProps {}
-
-const WeatherDetails: React.FC<WeatherDetailsProps> = props => {
+const WeatherDetails: React.FC<{}> = props => {
   const weather = useSelector((state: RootState) => state.weather);
 
   return (

@@ -1,3 +1,5 @@
+import { Story } from '@storybook/react';
+
 import Header from './Header';
 
 export default {
@@ -5,7 +7,7 @@ export default {
   component: Header,
 };
 
-const Template = props => <Header {...props} />;
+const Template: Story<{}> = args => <Header {...args} />;
 
 export const header = Template.bind({});
-header.props = {};
+header.args = {};

@@ -23,9 +23,7 @@ const Container = styled.div`
   }
 `;
 
-export interface CardProps {}
-
-const Card: React.FC<CardProps> = props => {
+const Card: React.FC<{}> = props => {
   return <Container>{props.children}</Container>;
 };
 
