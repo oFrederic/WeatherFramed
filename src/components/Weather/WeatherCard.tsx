@@ -6,15 +6,15 @@ import Card from '../UI/Card/Card';
 import WeatherInformation from './Informations/WeatherInformation';
 import WeatherDetails from './Details/WeatherDetails';
 // @ts-ignore
-import cloud from '../../assets/Videos/cloud.m4v';
+import cloud from '../../assets/Videos/cloud.mp4';
 // @ts-ignore
-import clear from '../../assets/Videos/clear.m4v';
+import clear from '../../assets/Videos/clear.mp4';
 // @ts-ignore
 import rain from '../../assets/Videos/rain.mp4';
 // @ts-ignore
-import snow from '../../assets/Videos/snow.m4v';
+import snow from '../../assets/Videos/snow.mp4';
 // @ts-ignore
-import thunder from '../../assets/Videos/thunder.m4v';
+import thunder from '../../assets/Videos/thunder.mp4';
 
 const City = styled.h1`
   color: #f3f3f3;
@@ -81,7 +81,9 @@ const WeatherCard: React.FC<WeatherCardProps> = props => {
   return (
     <Card>
       <BackgroundVideo>
-        <Video autoPlay muted loop src={currBackground}></Video>
+        <Video autoPlay muted loop src={currBackground}>
+          <source type="video/mp4" />
+        </Video>
       </BackgroundVideo>
       <City>{weather.location}</City>
       <WeatherInformation />
