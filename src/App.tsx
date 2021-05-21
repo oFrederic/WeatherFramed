@@ -33,7 +33,7 @@ const App = () => {
           message={notification.message}
         />
       )}
-      <WeatherCard />
+      {notification.status === 'success' && <WeatherCard />}
     </Fragment>
   );
 };
