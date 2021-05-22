@@ -17,7 +17,7 @@ export const getUserLocation = () => {
       );
       const response = await axios('https://ipapi.co/json/');
       const data = response.data;
-      const city = data.city;
+      const city = data.city.split('-ku')[0];
       const country = data.country_code;
       return { city, country };
     };
