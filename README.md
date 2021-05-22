@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# WeatherFramed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![ESLint](https://img.shields.io/badge/-ESLint-9f9f9f?style=plastic&logo=ESLint)
+![Prettier](https://img.shields.io/badge/-Prettier-9f9f9f?style=plastic&logo=Prettier)
+![Babel](https://img.shields.io/badge/-Babel-9f9f9f?style=plastic&logo=Babel)
+![WebPack](https://img.shields.io/badge/-WebPack-9f9f9f?style=plastic&logo=WebPack)
+![React](https://img.shields.io/badge/-React-9f9f9f?style=plastic&logo=React)
+![Redux](https://img.shields.io/badge/-Redux-9f9f9f?style=plastic&logo=Redux)
+![TypeScript](https://img.shields.io/badge/-TypeScript-9f9f9f?style=plastic&logo=TypeScript)
+![Emotion](https://img.shields.io/badge/-Emotion-9f9f9f?style=plastic&logo=Emotion)
+![Jest](https://img.shields.io/badge/-Jest-9f9f9f?style=plastic&logo=Jest)
+![Axios](https://img.shields.io/badge/-Axios-9f9f9f?style=plastic&logo=Axios)
+![Storybook](https://img.shields.io/badge/-Storybook-9f9f9f?style=plastic&logo=Storybook)
 
-In the project directory, you can run:
 
-### `npm start`
+#### WheaterFramed is an app that will give you the weather in a beautiful frame at any time!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+- [Contact](#contact)
 
-### `npm test`
+## General info
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+WeatherFramed was created during an interesting code challenge week, the goal is to geolocalise the position of the user and give the weather coresspondly. The user also have the option to select a specifik location.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ESlint
+- Prettier
+- Babel
+- WebPack
+- React
+- Redux
+- TypeScript
+- Emotion
+- Axios
+- Jest
+- Storybook
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Load the page.
+2. The current weather of your location will appear
+3. You can check other location by enter the city name inside the input field or directly in the link as show (/?city=${city}) 
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Automaticaly localise you and give your position weather.
+- Show an animated background depending of the weather.
+- Show An Icon that represente the current weather.
+- Show details related to the weather.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Status
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Work In Progress.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To-do list:
+- Cache the API and refresh it after 5min.
+- Show more than 1 city, implement a system of card rotation every 5 sec.
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3>Frederic Wojcikowski</h3>
+    <br>
+    <a href="https://github.com/oFrederic"><img src="https://img.shields.io/badge/-Github-9f9f9f?style=flat-square&logo=Github"></a>
+    <a href="https://linkedin.com/in/oFrederic"><img src="https://img.shields.io/badge/-Linkedin-9f9f9f?style=flat-square&logo=Linkedin"></a>
