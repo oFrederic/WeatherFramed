@@ -46,10 +46,10 @@ WeatherFramed was created during an interesting code challenge week, the goal is
 ## Setup
 
 1. Load the page.
-2. The current weather of your location will appear
-3. You can check other location by entering the city name inside the input field or directly in the link as show (/?city=${city}) 
+2. The current weather of your location will appear.
+3. You can check other locations by entering a city name inside the input field or directly in the link as shown (/?city=${city}).
 
-PS: on the Mobile version the card will have the fullscreen and won't have the header, to fetch a location you can query directly in the URL.
+PS: on the Mobile version the card will be in fullscreen and won't have the header, to fetch a location you can query directly in the URL.
 
 ## Features
 
@@ -57,7 +57,7 @@ PS: on the Mobile version the card will have the fullscreen and won't have the h
 - Show an animated background depending on the weather.
 - Show An Icon that represents the current weather.
 - Show details related to the weather.
-- Cache the weather data for 5 min so if you refresh in the same area you will not make an extra API call.
+- Cache the weather data for 5 min so if you refresh in that timeframe you will not make an extra API call.
 
 ## Status
 
