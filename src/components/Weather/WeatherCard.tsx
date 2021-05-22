@@ -19,7 +19,6 @@ import {
 
 export const WeatherCard: React.FC<{}> = props => {
   const weather = useSelector((state: RootState) => state.weather);
-  console.log(weather);
 
   let currBackground;
 

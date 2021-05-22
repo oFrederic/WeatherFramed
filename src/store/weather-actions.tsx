@@ -71,6 +71,7 @@ export const getCurrentWeather = (localisation: {
         }
       } else {
         //if the cache DOES contain de city weather data fetched in the last 5 min we get it back
+        console.log('Recieve data back from the cache');
         const JsonWeather = localStorage.getItem(
           localisation.city.toLowerCase()
         );

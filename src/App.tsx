@@ -15,7 +15,6 @@ export const App = () => {
   const query = new URLSearchParams(loc.search);
   const city = query.get('city');
 
-  console.log('RENDERING!!!');
   const dispatch = useDispatch();
   const location = useSelector((state: RootState) => state.localisation);
   const weather = useSelector((state: RootState) => state.weather);
