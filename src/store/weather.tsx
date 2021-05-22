@@ -6,6 +6,7 @@ interface WeatherState {
   temp: number;
   windSpeed: number;
   humidity: number;
+  timer: Date;
 }
 
 const initialState: WeatherState = {
@@ -14,6 +15,7 @@ const initialState: WeatherState = {
   temp: 0,
   windSpeed: 0,
   humidity: 0,
+  timer: new Date(),
 };
 
 const weatherSlice = createSlice({
@@ -27,6 +29,7 @@ const weatherSlice = createSlice({
       // transform m/s to km/h (1m/s = 3.6km/h).
       state.windSpeed = Math.round(action.payload.windSpeed * 3.6);
       state.humidity = action.payload.humidity;
+      state.timer = action.payload.timer;
     },
   },
 });
