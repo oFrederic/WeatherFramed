@@ -77,6 +77,13 @@ export const getCurrentWeather = (localisation: {
         );
         const weather = JSON.parse(JsonWeather!);
         dispatch(weatherActions.setWeather(weather));
+        dispatch(
+          uiActions.setNotification({
+            status: 'success',
+            title: 'Success!',
+            message: 'Fetching weather data successfully!',
+          })
+        );
       }
     } catch (error) {
       dispatch(
