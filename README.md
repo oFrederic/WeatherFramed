@@ -64,7 +64,6 @@ PS: on the Mobile version the card will have the fullscreen and won't have the h
 - Work In Progress.
 
 To-do list:
-- Cache the API and refresh it after 5min.
 - Show more than 1 city, implement a system of card rotation every 5 sec.
 
 ## Contact
