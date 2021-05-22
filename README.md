@@ -27,7 +27,7 @@
 
 ## General info
 
-WeatherFramed was created during an interesting code challenge week, the goal is to geolocalise the position of the user and give the weather coresspondly. The user also have the option to select a specifik location.
+WeatherFramed was created during an interesting code challenge week, the goal is to geolocalise the position of the user and give the weather for that location. The user also has the option to select a specific location.
 
 ## Technologies
 
@@ -47,14 +47,17 @@ WeatherFramed was created during an interesting code challenge week, the goal is
 
 1. Load the page.
 2. The current weather of your location will appear
-3. You can check other location by enter the city name inside the input field or directly in the link as show (/?city=${city}) 
+3. You can check other location by entering the city name inside the input field or directly in the link as show (/?city=${city}) 
+
+PS: on the Mobile version the card will have the fullscreen and won't have the header, to fetch a location you can query directly in the URL.
 
 ## Features
 
-- Automaticaly localise you and give your position weather.
-- Show an animated background depending of the weather.
-- Show An Icon that represente the current weather.
+- Automatically localize you and give your position weather.
+- Show an animated background depending on the weather.
+- Show An Icon that represents the current weather.
 - Show details related to the weather.
+- Cache the weather data for 5 min so if you refresh in the same area you will not make an extra API call.
 
 ## Status
 
