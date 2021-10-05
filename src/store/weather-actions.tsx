@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
-import { weatherActions } from 'store/weather';
-import { AppDispatch } from 'store/index';
-import { uiActions } from 'store/ui';
+import { weatherActions } from "store/weather";
+import { AppDispatch } from "store/index";
+import { uiActions } from "store/ui";
 
 // This function get the weather and return true if it was fetch more than 5 min in the past.
 const isCachedDataExpired = (cacheData: string | null) => {
@@ -16,22 +16,21 @@ const isCachedDataExpired = (cacheData: string | null) => {
   }
 };
 
-export const getCurrentWeather = (localisation: {
-  city: string;
-  country: string;
-}) => {
+export const getCurrentWeather = (localisation: { city: string; country: string }) => {
   return async (dispatch: AppDispatch) => {
     const getWeather = async () => {
-      console.log('openweathermap API call!');
+      const query = localisation.country ? `${localisation.city},${localisation.country}` : `${localisation.city}`;
+
       dispatch(
         uiActions.setNotification({
-          status: 'pending',
-          title: 'Fetching...',
-          message: 'Fetching weather data!',
+          status: "pending",
+          title: "Fetching...",
+          message: "Fetching weather data!",
         })
       );
+
       const response = await axios(
-        `http://api.openweathermap.org/data/2.5/weather?q=${localisation.city},${localisation.country}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
       );
 
       const data = response.data;
@@ -57,40 +56,35 @@ export const getCurrentWeather = (localisation: {
           dispatch(weatherActions.setWeather(currWeather));
           dispatch(
             uiActions.setNotification({
-              status: 'success',
-              title: 'Success!',
-              message: 'Fetching weather data successfully!',
+              status: "success",
+              title: "Success!",
+              message: "Fetching weather data successfully!",
             })
           );
 
           // We cache the current location and the current weather
-          localStorage.setItem(
-            localisation.city.toLowerCase(),
-            JSON.stringify(currWeather)
-          );
+          localStorage.setItem(localisation.city.toLowerCase(), JSON.stringify(currWeather));
         }
       } else {
         //if the cache DOES contain de city weather data fetched in the last 5 min we get it back
-        console.log('Recieve data back from the cache');
-        const JsonWeather = localStorage.getItem(
-          localisation.city.toLowerCase()
-        );
+        console.log("Recieve data back from the cache");
+        const JsonWeather = localStorage.getItem(localisation.city.toLowerCase());
         const weather = JSON.parse(JsonWeather!);
         dispatch(weatherActions.setWeather(weather));
         dispatch(
           uiActions.setNotification({
-            status: 'success',
-            title: 'Success!',
-            message: 'Fetching weather data successfully!',
+            status: "success",
+            title: "Success!",
+            message: "Fetching weather data successfully!",
           })
         );
       }
     } catch (error) {
       dispatch(
         uiActions.setNotification({
-          status: 'error',
-          title: 'Error!',
-          message: 'Fetching weather data failed!',
+          status: "error",
+          title: "Error!",
+          message: "Fetching weather data failed!",
         })
       );
       throw new Error(error);
